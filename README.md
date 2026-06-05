@@ -106,6 +106,18 @@ After changing permissions, restart Terminal and relaunch the app.
 - Save JSON to export sequence
 - Load JSON to restore sequence
 
+## Screenshots
+
+Add the following image files to the repository and the README will display them in this section:
+
+- [screenshots/ui.png](screenshots/ui.png)
+- [screenshots/execution.png](screenshots/execution.png)
+
+Recommended labels:
+
+- UI screenshot: the main application window with recorded steps
+- Execution screenshot: the running overlay during replay
+
 ## JSON Sequence Format
 
 Sequence file structure:
