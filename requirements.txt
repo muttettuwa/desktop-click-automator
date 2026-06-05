@@ -1,0 +1,5 @@
+# Clicker Tool — Python dependencies
+# Install: pip install -r requirements.txt
+
+pynput>=1.7.6                 # global mouse listener (recording)
+pyobjc-framework-Quartz>=10.0 # Quartz backend (execution/replay on macOS)
