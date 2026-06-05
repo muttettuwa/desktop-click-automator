@@ -112,7 +112,7 @@ Add the following image files to the repository so GitHub renders them inline:
 
 ### UI
 
-![Desktop Click Automator UI](screenshots/ui.png)
+![Desktop Click Automator UI](screenshots/UI.png)
 
 ### Execution
 
