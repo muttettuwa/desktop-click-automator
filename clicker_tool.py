@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Clicker Tool — macOS Screen Automation
+Desktop Click Automator — macOS Screen Automation
 =======================================
 Record mouse click sequences, set per-step delays, then replay N times.
 
@@ -258,7 +258,7 @@ class ExecutionOverlay(tk.Toplevel):
         stop_callback: Callable[[], None],
     ) -> None:
         super().__init__(parent)
-        self.title("Clicker Tool — Running")
+        self.title("Desktop Click Automator — Running")
         self.attributes("-topmost", True)
         self.resizable(False, False)
         self.protocol("WM_DELETE_WINDOW", lambda: None)  # disallow manual close
@@ -275,7 +275,7 @@ class ExecutionOverlay(tk.Toplevel):
 
         tk.Label(
             self,
-            text="CLICKER TOOL  \u25B6  RUNNING",
+            text="DESKTOP CLICK AUTOMATOR  \u25B6  RUNNING",
             bg=self._BG, fg=self._FG_TITLE,
             font=("Helvetica", 13, "bold"),
         ).pack(pady=(14, 4))
@@ -327,10 +327,10 @@ class ExecutionOverlay(tk.Toplevel):
 # ---------------------------------------------------------------------------
 
 class ClickerToolApp:
-    """Clicker Tool — main application window."""
+    """Desktop Click Automator — main application window."""
 
     _WIN_SIZE = "820x580"
-    _WIN_TITLE = "Clicker Tool"
+    _WIN_TITLE = "Desktop Click Automator"
 
     # Colours
     _C_HEADER_BG = "#2b2d42"
@@ -474,7 +474,7 @@ class ClickerToolApp:
         hdr.pack(fill="x")
 
         tk.Label(
-            hdr, text="Clicker Tool",
+            hdr, text="Desktop Click Automator",
             bg=self._C_HEADER_BG, fg=self._C_HEADER_FG,
             font=("Helvetica", 18, "bold"),
         ).pack(side="left", padx=16)

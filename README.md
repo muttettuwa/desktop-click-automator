@@ -1,10 +1,10 @@
-# Clicker Tool (macOS)
+# Desktop Click Automator (macOS)
 
 A desktop automation utility to record global mouse clicks, edit step sequences, and replay them with configurable timing.
 
 ## Overview
 
-Clicker Tool provides a Tkinter GUI for building replayable click workflows:
+Desktop Click Automator provides a Tkinter GUI for building replayable click workflows:
 
 - Record global mouse clicks from anywhere on screen
 - Edit per-step coordinates, click type, label, and delay

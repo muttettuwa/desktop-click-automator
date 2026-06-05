@@ -1,5 +1,5 @@
 #!/bin/bash
-# Clicker Tool launcher
+# Desktop Click Automator launcher
 # Prefer Homebrew framework Python when available, otherwise use python3 from PATH.
 FRAMEWORK_PYTHON="/opt/homebrew/opt/python@3.12/Frameworks/Python.framework/Versions/3.12/bin/python3.12"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
