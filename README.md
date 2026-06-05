@@ -108,7 +108,7 @@ After changing permissions, restart Terminal and relaunch the app.
 
 ## Screenshots
 
-Add the following image files to the repository so GitHub renders them inline:
+Add the following image files to the repository, so GitHub renders them inline:
 
 ### UI
 
@@ -150,7 +150,7 @@ Supported click_type values:
 
 ### Mouse moves but does not click
 
-Cause: Accessibility permission is missing or not trusted for current process.
+Cause: Accessibility permission is missing or not trusted for the current process.
 
 Actions:
 
