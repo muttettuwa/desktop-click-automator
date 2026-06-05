@@ -8,6 +8,9 @@ import pyautogui
 # Move mouse to a corner to abort replay (pyautogui safety feature).
 pyautogui.FAILSAFE = True
 
+_MS_TO_SECONDS = 1000.0
+_STOP_CHECK_INTERVAL_S = 0.05
+
 
 class ClickReplayer:
     """Replays a list of click dicts produced by ClickRecorder."""
@@ -43,14 +46,14 @@ class ClickReplayer:
             for i, click in enumerate(clicks):
                 if self._stop_event.is_set():
                     break
-                delay_s = max(0, click.get("delay_ms", 0)) / 1000.0
+                delay_s = max(0, click.get("delay_ms", 0)) / _MS_TO_SECONDS
                 if delay_s > 0:
                     # Use small slices so we can respond to stop() quickly.
                     deadline = time.monotonic() + delay_s
                     while time.monotonic() < deadline:
                         if self._stop_event.is_set():
                             break
-                        time.sleep(min(0.05, deadline - time.monotonic()))
+                        time.sleep(min(_STOP_CHECK_INTERVAL_S, deadline - time.monotonic()))
                 if self._stop_event.is_set():
                     break
                 pyautogui.click(click["x"], click["y"])

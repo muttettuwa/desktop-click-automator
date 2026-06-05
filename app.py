@@ -14,6 +14,7 @@ _COL_Y = "Y"
 _COL_DELAY = "Delay (ms)"
 _COLUMNS = (_COL_STEP, _COL_X, _COL_Y, _COL_DELAY)
 
+_QUEUE_POLL_INTERVAL_MS = 50
 _STATE_IDLE = "idle"
 _STATE_RECORDING = "recording"
 _STATE_REPLAYING = "replaying"
@@ -129,7 +130,7 @@ class App(tk.Tk):
                 self._status_var.set(f"Recording…  {len(self._clicks)} click(s) captured")
         except queue.Empty:
             pass
-        self.after(50, self._poll_queue)
+        self.after(_QUEUE_POLL_INTERVAL_MS, self._poll_queue)
 
     # ------------------------------------------------------------------
     # Table helpers
@@ -289,7 +290,7 @@ class _EditDialog(tk.Toplevel):
             y = int(self._y_var.get())
             delay_ms = int(self._delay_var.get())
             if delay_ms < 0:
-                raise ValueError("delay_ms must be non-negative")
+                raise ValueError("Delay must be a non-negative number")
         except ValueError as exc:
             messagebox.showerror("Invalid input", str(exc), parent=self)
             return
