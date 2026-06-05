@@ -108,15 +108,20 @@ After changing permissions, restart Terminal and relaunch the app.
 
 ## Screenshots
 
-Add the following image files to the repository and the README will display them in this section:
+Add the following image files to the repository so GitHub renders them inline:
 
-- [screenshots/ui.png](screenshots/ui.png)
-- [screenshots/execution.png](screenshots/execution.png)
+### UI
 
-Recommended labels:
+![Desktop Click Automator UI](screenshots/ui.png)
 
-- UI screenshot: the main application window with recorded steps
-- Execution screenshot: the running overlay during replay
+### Execution
+
+![Desktop Click Automator execution overlay](screenshots/execution.png)
+
+Recommended file names:
+
+- `screenshots/ui.png` for the main application window with recorded steps
+- `screenshots/execution.png` for the running overlay during replay
 
 ## JSON Sequence Format
 
